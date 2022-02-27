@@ -9,12 +9,13 @@
 body {
     font-family: Fredoka, sans-serif;
     font-weight: 300;
+    color: #3a3a3a;
 }
 
 /* LOGO */
 
-.logo {
-    float: left;
+#logo {
+    text-align: center;
     font-size: 300%;
     text-transform: uppercase;
     letter-spacing: 0.1rem;;
@@ -23,17 +24,24 @@ body {
 
 /* NAV */
 
-.nav {
+#menu {
     letter-spacing: 0.25rem;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
 }
 
-.nav li {
+#menu li {
     list-style-type: none;
-    margin-right: 1.0rem;
+    margin: 0.75rem;
 }
 
-.nav a {
+#menu a {
     text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+}
+
+.current-page {
+    border-bottom: 1px solid #3a3a3a;
 }

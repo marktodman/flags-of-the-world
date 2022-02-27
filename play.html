@@ -23,10 +23,13 @@
     <!-- LOGO AND NAV -->
     <header>
         <!-- LOGO -->
-        <h1 class="logo"><img src="favicon-32x32.png" alt="red flag icon">FLAGS OF THE WORLD<img src="favicon-32x32.png" alt="red flag icon"></h1>
+        <a href="index.html">
+            <h1 class="logo"><img src="favicon-32x32.png" alt="red flag icon">Flags of the World<img
+                    src="favicon-32x32.png" alt="red flag icon"></h1>
+        </a>
         <!-- NAV -->
         <nav>
-            <ul id="nav">
+            <ul class="nav">
                 <li>
                     <a href="index.html">HOME</a>
                 </li>
@@ -39,24 +42,32 @@
             </ul>
         </nav>
     </header>
-<!-- GAME AREA -->
-<div class="game-container">
-    <div class="timer"></div>
-    <div class="flag"></div>
-    <div class="answer-box">A:<span id="answer-A"></span></div>
-    <div class="answer-box">B:<span id="answer-B"></span></div>
-    <div class="answer-box">C:<span id="answer-C"></span></div>
-    <div class="scores-area">
-        <p class="scores">Correct:<span id="correct">0</span></p>
-        <p class="scores">Inorrect:<span id="incorrect">0</span></p>
+    <!-- NAME INPUT AND GAME START -->
+    <div id="start">
+        <label for="fname">Enter your name to begin:</label>
+        <input type="text" id="player-name" required>
+        <button id="play-btn"><strong>START THE TIMER!</strong></button>
     </div>
-</div>   
+    <!-- GAME AREA -->
+    <div class="game-container">
+        <div class="timer"></div>
+        <div class="flag"><img src="assets/images/ad.webp"></div>
+        <div class="answer-box">A:<span id="answer-A"></span></div>
+        <div class="answer-box">B:<span id="answer-B"></span></div>
+        <div class="answer-box">C:<span id="answer-C"></span></div>
+        <div class="scores-area">
+            <p class="scores">Correct:<span id="correct">0</span></p>
+            <p class="scores">Inorrect:<span id="incorrect">0</span></p>
+        </div>
+    </div>
 
 
 
 
 
+    <!-- SCRIPTS -->
+    <script src="assets/js/game.js"></script>
+    <script src="assets/js/flags.js"></script>
+</body>
 
-
-<label for="fname">Enter your name to begin:</label>
-<input type="text" id="player-name" required>
+</html>

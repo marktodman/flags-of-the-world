@@ -10,3 +10,30 @@ body {
     font-family: Fredoka, sans-serif;
     font-weight: 300;
 }
+
+/* LOGO */
+
+.logo {
+    float: left;
+    font-size: 300%;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;;
+    margin-left: 1.0rem;
+}
+
+/* NAV */
+
+.nav {
+    letter-spacing: 0.25rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav li {
+    list-style-type: none;
+    margin-right: 1.0rem;
+}
+
+.nav a {
+    text-decoration: none;
+}

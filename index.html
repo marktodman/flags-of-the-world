@@ -20,14 +20,17 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <!-- LOGO -->
-        <h1 class="logo"><img src="favicon-32x32.png" alt="red flag icon">FLAGS OF THE WORLD<img src="favicon-32x32.png" alt="red flag icon"></h1>
+        <a href="index.html">
+            <h1 class="logo"><img src="favicon-32x32.png" alt="red flag icon">Flags of the World<img
+                    src="favicon-32x32.png" alt="red flag icon"></h1>
+        </a>
         <!-- NAV -->
         <nav>
-            <ul id="nav">
+            <ul class="nav">
                 <li>
-                    <a href="index.html">HOME</a>
+                    <a href="index.html" class="active">HOME</a>
                 </li>
                 <li>
                     <a href="play.html">PLAY</a>
@@ -39,15 +42,20 @@
         </nav>
     </header>
     <!-- MAIN CONTENT -->
-    <div>
-        <h2>Welcome to Flags of the World</h2>
-        <p>The fun game that tests your knowledge about the flags of nations around the World.</p>
-        <p>Test yourself against more than 200 flags!</p>
-        <p>How many can you get in 60 seconds?</p>
-        
-        <!-- START BUTTON -->
-        <button id="game-btn"><strong>PLAY</strong><p><img src="favicon-16x16.png"alt="red flag icon">FLAGS OF THE WORLD<img src="favicon-16x16.png"alt="red flag icon"></p></button>
-    </div>
+    <section>
+        <div>
+            <h2>Welcome to Flags of the World</h2>
+            <p>The fun game that tests your knowledge about the flags of nations around the World.</p>
+            <p>Test yourself against more than 200 flags!</p>
+            <p>How many can you get in 60 seconds?</p>
+
+            <!-- START BUTTON -->
+            <button id="play-btn"><strong>PLAY</strong>
+                <p><img src="favicon-16x16.png" alt="red flag icon">FLAGS OF THE WORLD<img src="favicon-16x16.png"
+                        alt="red flag icon"></p>
+            </button>
+        </div>
+    </section>
     <script src="assets/js/game.js"></script>
 </body>
 

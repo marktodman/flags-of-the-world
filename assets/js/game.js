@@ -1,2 +1,19 @@
-let playerName = document.getElementById('player-name').textContent
-console.log(playerName);
+function createFlags() {
+
+}
+
+function runGame() {
+
+}
+
+function checkAnswer() {
+
+}
+
+function incrementCorrectAnswer() {
+
+}
+
+function incrementWrongAnswer() {
+
+}

@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <!-- LOGO AND NAV -->
     <header>
         <!-- LOGO -->
         <h1 class="logo"><img src="favicon-32x32.png" alt="red flag icon">FLAGS OF THE WORLD<img src="favicon-32x32.png" alt="red flag icon"></h1>
@@ -30,7 +31,7 @@
                     <a href="index.html">HOME</a>
                 </li>
                 <li>
-                    <a href="game.html">PLAY</a>
+                    <a href="play.html">PLAY</a>
                 </li>
                 <li>
                     <a href="instructions.html">INSTRUCTIONS</a>
@@ -38,6 +39,19 @@
             </ul>
         </nav>
     </header>
+<!-- GAME AREA -->
+<div class="game-container">
+    <div class="timer"></div>
+    <div class="flag"></div>
+    <div class="answer-box">A:<span id="answer-A"></span></div>
+    <div class="answer-box">B:<span id="answer-B"></span></div>
+    <div class="answer-box">C:<span id="answer-C"></span></div>
+    <div class="scores-area">
+        <p class="scores">Correct:<span id="correct">0</span></p>
+        <p class="scores">Inorrect:<span id="incorrect">0</span></p>
+    </div>
+</div>   
+
 
 
 
@@ -45,4 +59,4 @@
 
 
 <label for="fname">Enter your name to begin:</label>
-<input type="text" name="fname" id="player-name" required>
+<input type="text" id="player-name" required>

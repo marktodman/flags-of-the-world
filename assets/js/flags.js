@@ -865,3 +865,26 @@ let flags = [
     country: 'Zimbabwe',
 }
 ];
+
+console.log(flags[0].country);
+
+// Function to randomly sort array copied from: https://www.codegrepper.com/code-examples/javascript/how+to+randomly+sort+an+array+javascript 
+
+function createNewFlags(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  }
+
+  let newFlags = createNewFlags(flags); 
+  console.log(newFlags[0].country);
+  console.log(newFlags[0].image);
+
+  document.getElementById('answer-1').innerText = newFlags[0].country;
+  document.getElementById('flag').src = newFlags[0].image;

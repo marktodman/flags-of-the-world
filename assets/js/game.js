@@ -10,10 +10,10 @@ function checkAnswer() {
 
 }
 
-function incrementCorrectAnswer() {
+function increaseCorrectScore() {
 
 }
 
-function incrementWrongAnswer() {
+function increaseIncorrectScore() {
 
 }

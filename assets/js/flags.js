@@ -888,3 +888,44 @@ function createNewFlags(array) {
 
   document.getElementById('answer-1').innerText = newFlags[0].country;
   document.getElementById('flag').src = newFlags[0].image;
+
+// Create an array of the correct answer and two wrong answers
+function buildFullAnswerArray() {
+    let fullAnswerArray = []; {
+        fullAnswerArray.push(newFlags[0].country);
+        fullAnswerArray.push(newFlags[60].country);
+        fullAnswerArray.push(newFlags[120].country);
+    }
+    return fullAnswerArray
+}
+
+let allAnswers = buildFullAnswerArray();
+console.log(allAnswers);
+
+// Create an array of the three countries from random contries and then populate the three HTML questions?
+
+// How to change which one is correct? 1/2/3?? - easy way would be to write three incorrect answers in the object...
+
+// Take one correct country from the shuffled array using index[0] and then plus one for each new set of questions. Display flag from index[0] in div
+// Take two incorrect countries from the shuffled array using index [60] and index [120] and then plus one for each new set of questions
+// Add all of them to an array - the correct country plus two incorrect countries
+// Create a new random array from the newly created array of three
+// Check button onclick whether correct answer or not - event listner
+// If correct - return CORRECT! for 500 milliseconds and advance to next question
+// If incorrect - return INCORRECT! Correct answer was `${correctAnswer}` for 500 milliseconds and advance to next question
+// Continue until timer 6000 milliseconds runs out
+
+// let randomCountryOne = Math.floor(Math.random() * flags.length);
+// let randomCountryTwo = Math.floor(Math.random() * flags.length);
+// let randomCountryThree = Math.floor(Math.random() * flags.length);
+
+// console.log(flags[randomCountryOne].country);
+// console.log(flags[randomCountryTwo].country);
+// console.log(flags[randomCountryThree].country);
+
+// The above code failed as received two countries the same in one instance...Ireland!
+// ? If using this method, use a if loop to check if the values are the different...if true use random country, if flase run again?
+
+
+
+

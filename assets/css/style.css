@@ -9,7 +9,7 @@
 body {
     font-family: Fredoka, sans-serif;
     font-weight: 300;
-    color: #3a3a3a;
+    color: #1d3557;
 }
 
 /* LOGO */
@@ -43,5 +43,5 @@ body {
 }
 
 .current-page {
-    border-bottom: 1px solid #3a3a3a;
+    border-bottom: 1px solid #1d3557;
 }

@@ -886,8 +886,8 @@ function createNewFlags(array) {
   console.log(newFlags[0].country);
   console.log(newFlags[0].image);
 
-  document.getElementById('answer-1').innerText = newFlags[0].country;
-  document.getElementById('flag').src = newFlags[0].image;
+//   document.getElementById('answer-1').innerText = newFlags[0].country;
+//   document.getElementById('flag').src = newFlags[0].image;
 
 // Create an array of the correct answer and two wrong answers
 function buildFullAnswerArray() {
@@ -901,6 +901,29 @@ function buildFullAnswerArray() {
 
 let allAnswers = buildFullAnswerArray();
 console.log(allAnswers);
+
+// Shuffle the allAnswers array so that the order of the countries in the answers will be randomised
+
+function createShuffledAnswers(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  }
+
+  let finalAnswers = createShuffledAnswers(allAnswers); 
+  console.log(finalAnswers);
+
+  document.getElementById('answer-1').innerText = finalAnswers[0];
+  document.getElementById('answer-2').innerText = finalAnswers[1];
+  document.getElementById('answer-3').innerText = finalAnswers[2];
+  document.getElementById('flag').src = newFlags[0].image;
+
 
 // Create an array of the three countries from random contries and then populate the three HTML questions?
 

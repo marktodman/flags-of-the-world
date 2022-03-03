@@ -38,28 +38,18 @@
             </ul>
         </nav>
     </header>
-    <!-- NAME INPUT AND GAME START -->
-    <div id="start">
-        <label for="fname">Enter your name to begin:</label>
-        <input type="text" id="player-name" required>
-        <button id="play-btn"><strong>START THE TIMER!</strong></button>
-    </div>
+   
     <!-- GAME AREA -->
     <div class="game-container">
-        <div class="timer"></div>
+        <div id="timer"></div>
         <div class="flag-box"><img src="" id="flag"></div>
         <div class="answer-box">1)<button class="answer-btn" id="answer-1"></button></div>
         <div class="answer-box">2)<button class="answer-btn" id="answer-2"></button></div>
         <div class="answer-box">3)<button class="answer-btn" id="answer-3"></button></div>
         <div class="scores-area">
             <p class="scores">Correct:<span id="correct">0</span></p>
-            <p class="scores">Inorrect:<span id="incorrect">0</span></p>
         </div>
     </div>
-
-
-
-
 
     <!-- SCRIPTS -->
     <script src="assets/js/flags.js"></script>

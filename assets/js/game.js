@@ -13,7 +13,7 @@ function createNewFlags(array) {
   }
 
 let newFlags = createNewFlags(flags);
-console.log(newFlags[0]);
+console.log(newFlags[0].country);
 
 // Create an array of the correct answer and two wrong answers
 function buildFullAnswerArray() {
@@ -65,6 +65,19 @@ function createShuffledAnswers(array) {
   document.getElementById('answer-3').innerText = finalAnswers[2];
   document.getElementById('flag').src = newFlags[0].image;
 
+
+let count = 60;
+let interval = setInterval(function(){
+  document.getElementById('timer').innerHTML=count;
+  count--;
+  if (count === 0){
+    clearInterval(interval);
+    document.getElementById('timer').innerHTML='GAME OVER'; // this is where I can add what to do once the timer ends - take to the GAME OVER score html page
+  }
+}, 1000);
+
+
+
 //   Need to iterate through the above adding one each time DO/WHILE TIMER loop??
 
 
@@ -110,9 +123,5 @@ function checkAnswer() {
 }
 
 function increaseCorrectScore() {
-
-}
-
-function increaseIncorrectScore() {
 
 }

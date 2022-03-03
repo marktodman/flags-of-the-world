@@ -44,14 +44,23 @@
             <p>The fun game that tests your knowledge about the flags of nations around the World.</p>
             <p>Test yourself against more than 200 flags!</p>
             <p>How many can you get in 60 seconds?</p>
-
+            
+            <!-- NAME INPUT AND GAME START -->
+            <div id="start">
+                <label for="fname">Enter your name to begin:</label>
+                <input type="text" id="player-name" required>
+                <button id="play-btn"><strong>START THE TIMER!</strong></button>
+            </div>
             <!-- START BUTTON -->
-            <button id="play-btn"><strong>PLAY</strong>
-                <p><img src="favicon-16x16.png" alt="red flag icon">FLAGS OF THE WORLD<img src="favicon-16x16.png"
-                        alt="red flag icon"></p>
+            <button id="play-btn"><a href="play.html"><strong>PLAY</strong>
+                    <p><img src="favicon-16x16.png" alt="red flag icon">FLAGS OF THE WORLD<img src="favicon-16x16.png"
+                            alt="red flag icon"></p>
+                </a>
             </button>
         </div>
     </section>
+    <!-- SCRIPTS -->
+    <script src="assets/js/flags.js"></script>
     <script src="assets/js/game.js"></script>
 </body>
 

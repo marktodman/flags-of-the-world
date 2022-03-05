@@ -69,6 +69,9 @@ body.wrong {
     width: 650px;
     max-width: 90%;
     margin: 0 auto;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
     background-color: #F1FAEE;
     display: flex;
     flex-direction: column;

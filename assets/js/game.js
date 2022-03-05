@@ -105,11 +105,11 @@ answer3.addEventListener('click', checkAnswer);
 **/ 
 function checkAnswer() {
     if (this.textContent === newFlags[0].country) {
-        let correct = `CORRECT! <button id="next-question">Next flag >></button>`
+        let correct = `CORRECT!`
         document.getElementById('result').innerHTML = correct;
         increaseCorrectScore();
     } else {
-        let incorrect = `WRONG! <button id="next-question">Try the next flag >></button>`
+        let incorrect = `WRONG!`
         document.getElementById('result').innerHTML = incorrect;
     }
 }

@@ -11,7 +11,6 @@
 }
 
 body {
-    --hue: var(--hue-neutral);
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -36,14 +35,12 @@ body.wrong {
     font-size: 300%;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    ;
-    margin-left: 1.0rem;
 }
 
 /* NAV */
 
 #menu {
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,7 +48,7 @@ body.wrong {
 
 #menu li {
     list-style-type: none;
-    margin: 0.75rem;
+    margin: 1.25rem;
 }
 
 #menu a {
@@ -70,7 +67,29 @@ body.wrong {
     border-bottom: 1px solid #1d3557;
 }
 
+/* TIMER */
+
+#timer {
+    margin: 10px;
+    background-color: #1D3557;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* FLAG AREA */
+
+.flag {
+    margin: 5px;
+    padding: 10px;
+}
+
 /* GAME AREA */
+
 .container {
     width: 650px;
     max-width: 90%;
@@ -86,6 +105,7 @@ body.wrong {
 }
 
 /* ANSWER BUTTONS */
+
 .answer-box {
     display: grid;
     grid-auto-flow: row;
@@ -118,6 +138,7 @@ body.wrong {
 }
 
 /* NEXT BUTTON */
+
 .next-btn {
     margin: 10px auto;
     background-color: #1D3557;
@@ -125,8 +146,34 @@ body.wrong {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
 .next-btn:hover {
     border-color: black;
 }
+
+.hide {
+    display: none;
+}
+
+/* SCORE */
+
+.score {
+    margin: 10px auto;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* RESULT */
+
+.result {
+    margin: 10px auto;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+

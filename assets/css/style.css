@@ -18,16 +18,6 @@ body {
     background-color: #A8DADC;
 }
 
-/* Different background colors for correct and incorrect answers */
-
-body.correct {
-    background-color: #52b788;
-}
-
-body.wrong {
-    background-color: #E63946;
-}
-
 /* LOGO */
 
 #logo {
@@ -67,6 +57,51 @@ body.wrong {
     border-bottom: 1px solid #1d3557;
 }
 
+/* HOME PAGE STYLING */
+
+.container {
+    width: 650px;
+    max-width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    background-color: #F1FAEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-btn {
+    margin: 10px auto;
+    background-color: #1D3557;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.play-btn:hover {
+    border: 1px solid #E63946;
+}
+
+/* PLAY PAGE STYLING */
+
+/* Different background colors for correct and incorrect answers */
+
+body.correct {
+    background-color: #52b788;
+}
+
+body.wrong {
+    background-color: #E63946;
+}
+
 /* TIMER */
 
 #timer {
@@ -88,21 +123,7 @@ body.wrong {
     padding: 10px;
 }
 
-/* GAME AREA */
-
-.container {
-    width: 650px;
-    max-width: 90%;
-    margin: 0 auto;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 10px 2px;
-    background-color: #F1FAEE;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+/* GAME AREA is .container class used on HOME PAGE*/
 
 /* ANSWER BUTTONS */
 

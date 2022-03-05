@@ -1,15 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
-body {
+/* Make heights and widths easier to style and set fonts */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     font-family: Fredoka, sans-serif;
     font-weight: 300;
     color: #1d3557;
+}
+
+body {
+    --hue: var(--hue-neutral);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #A8DADC;
+}
+
+/* Different background colors for correct and incorrect answers */
+
+body.correct {
+    background-color: #52b788;
+}
+
+body.wrong {
+    background-color: #E63946;
 }
 
 /* LOGO */
@@ -18,7 +35,8 @@ body {
     text-align: center;
     font-size: 300%;
     text-transform: uppercase;
-    letter-spacing: 0.1rem;;
+    letter-spacing: 0.1rem;
+    ;
     margin-left: 1.0rem;
 }
 
@@ -44,4 +62,24 @@ body {
 
 .current-page {
     border-bottom: 1px solid #1d3557;
+}
+
+/* GAME AREA */
+.container {
+    width: 650px;
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: #F1FAEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ANSWERS */
+.answer-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

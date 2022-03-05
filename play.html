@@ -38,16 +38,18 @@
             </ul>
         </nav>
     </header>
-   
+
     <!-- GAME AREA -->
-    <div class="game-container">
+    <div class="container">
         <div id="timer"></div>
         <div class="flag-box"><img src="" id="flag"></div>
-        <div class="answer-box">1)<button class="answer-btn" id="answer-1"></button></div>
-        <div class="answer-box">2)<button class="answer-btn" id="answer-2"></button></div>
-        <div class="answer-box">3)<button class="answer-btn" id="answer-3"></button></div>
+        <div id="answer-buttons" class="answer-box">
+            <button class="btn" id="answer-1">Country 1</button>
+            <button class="btn" id="answer-2">Country 2</button>
+            <button class="btn" id="answer-3">Country 3</button>
+        </div>
         <div id="result"></div>
-        <div class="answer-box"><button class="answer-btn" id="next-question">NEXT >></button></div>
+        <div class="answer-box"><button class="answer-btn hide" id="next-question">NEXT FLAG>></button></div>
         <div class="scores-area">
             <p class="scores">Correct:<span id="correct">0</span></p>
         </div>
@@ -56,6 +58,6 @@
     <!-- SCRIPTS -->
     <script src="assets/js/flags.js"></script>
     <script src="assets/js/game.js"></script>
-    </body>
+</body>
 
 </html>

@@ -1,6 +1,6 @@
 // Flags downloaded from flagpedia.net. File name retained for simplicity. JavaScript code all original.
 
-let flags = [
+const flags = [
 { 
     image: 'assets/images/ad.webp',
     country: 'Andorra',

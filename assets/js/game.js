@@ -1,3 +1,5 @@
+const nextButton = document.getElementById('next-question');
+
 /**
  * Set 60 second countdown timer. Code modified from Grepper: https://www.codegrepper.com/code-examples/javascript/add+countdown+timer+to+javascript+quiz
  */
@@ -13,7 +15,7 @@ let interval = setInterval(function () {
 
 /**
  * Function to randomly sort array modified from: https://www.codegrepper.com/code-examples/javascript/how+to+randomly+sort+an+array+javascript 
-*/
+ */
 function createNewFlags(array) {
     var currentIndex = array.length,
         temporaryValue, randomIndex;
@@ -30,15 +32,23 @@ function createNewFlags(array) {
 let newFlags = createNewFlags(flags);
 console.log(newFlags[0].country);
 
+let currentFlagIndex = 0;
+console.log(newFlags[currentFlagIndex]);
+
+let wrongFlagIndex = 12;
+console.log(newFlags[wrongFlagIndex]);
+
+let anotherWrongFlagIndex = 21;
+console.log(newFlags[anotherWrongFlagIndex]);
 
 /** 
  * Create an array of the correct answer and two wrong answers
  **/
 function buildFullAnswerArray() {
     let fullAnswerArray = []; {
-        fullAnswerArray.push(newFlags[0].country);
-        fullAnswerArray.push(newFlags[60].country);
-        fullAnswerArray.push(newFlags[80].country);
+        fullAnswerArray.push(newFlags[currentFlagIndex].country);
+        fullAnswerArray.push(newFlags[wrongFlagIndex].country);
+        fullAnswerArray.push(newFlags[anotherWrongFlagIndex].country);
     }
     return fullAnswerArray
 }
@@ -69,7 +79,7 @@ console.log(finalAnswers);
 document.getElementById('answer-1').innerText = finalAnswers[0];
 document.getElementById('answer-2').innerText = finalAnswers[1];
 document.getElementById('answer-3').innerText = finalAnswers[2];
-document.getElementById('flag').src = newFlags[0].image;
+document.getElementById('flag').src = newFlags[currentFlagIndex].image;
 
 // Take one correct country from the shuffled array using index[0] and then plus one for each new set of questions. Display flag from index[0] in div
 // Take two incorrect countries from the shuffled array using index [60] and index [120] and then plus one for each new set of questions
@@ -102,15 +112,23 @@ answer3.addEventListener('click', checkAnswer);
  * Check button onclick whether correct answer or not - event listner
  * If correct - return CORRECT! for 500 milliseconds and advance to next question
  * If incorrect - return WRONG!
-**/ 
+ **/
+
+
+
+
 function checkAnswer() {
-    if (this.textContent === newFlags[0].country) {
+    if (this.textContent === newFlags[currentFlagIndex].country) {
         let correct = `CORRECT!`
         document.getElementById('result').innerHTML = correct;
+        nextButton.classList.remove('hide');
+        setStatusClass(document.body, correct)
         increaseCorrectScore();
     } else {
         let incorrect = `WRONG!`
         document.getElementById('result').innerHTML = incorrect;
+        nextButton.classList.remove('hide');
+        setStatusClass(document.body, wrong)
     }
 }
 /**
@@ -119,6 +137,20 @@ function checkAnswer() {
 function increaseCorrectScore() {
     let currentScore = parseInt(document.getElementById('correct').innerText);
     document.getElementById('correct').innerText = ++currentScore;
+}
+
+function setStatusClass(element, correct) {
+    clearStatusClass(element)
+    if (correct) {
+        element.classList.add('correct')
+    } else {
+        element.classList.add('wrong')
+    }
+}
+
+function clearStatusClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
 }
 
 // let nextFlag = document.getElementById('next-question');
@@ -146,4 +178,3 @@ function increaseCorrectScore() {
 // function nextQuestion() {
 //     if ()
 //  }
- 

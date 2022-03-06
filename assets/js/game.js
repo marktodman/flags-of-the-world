@@ -151,17 +151,17 @@ function resetState() {
     nextButton.classList.add('hide');
 }
 
-function buildNextQuestionArray() {
-    currentFlagIndex = ++currentFlagIndex;
-    wrongFlagIndex = ++wrongFlagIndex;
-    anotherWrongFlagIndex = ++anotherWrongFlagIndex;
-    let nextQuestionArray = []; {
-        nextQuestionArray.push(newFlags[currentFlagIndex].country);
-        nextQuestionArray.push(newFlags[wrongFlagIndex].country);
-        nextQuestionArray.push(newFlags[anotherWrongFlagIndex].country);
-    }
-    return nextQuestionArray
-}
+// function buildNextQuestionArray() {
+//     currentFlagIndex = ++currentFlagIndex;
+//     wrongFlagIndex = ++wrongFlagIndex;
+//     anotherWrongFlagIndex = ++anotherWrongFlagIndex;
+//     let nextQuestionArray = []; {
+//         nextQuestionArray.push(newFlags[currentFlagIndex].country);
+//         nextQuestionArray.push(newFlags[wrongFlagIndex].country);
+//         nextQuestionArray.push(newFlags[anotherWrongFlagIndex].country);
+//     }
+//     return nextQuestionArray
+// }
 
-let nextAnswers = buildNextQuestionArray();
-console.log(nextAnswers);
+// let nextAnswers = buildNextQuestionArray();
+// console.log(nextAnswers);

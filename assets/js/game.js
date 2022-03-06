@@ -56,7 +56,9 @@ function buildFullAnswerArray() {
 let allAnswers = buildFullAnswerArray();
 console.log(allAnswers);
 
-// Shuffle the allAnswers array so that the order of the countries in the answers will be randomised
+/** 
+* Shuffle the allAnswers array so that the order of the countries in the answers will be randomised
+**/
 function createShuffledAnswers(array) {
     var currentIndex = array.length,
         temporaryValue, randomIndex;
@@ -110,35 +112,37 @@ answer3.addEventListener('click', checkAnswer);
 
 /** 
  * Check button onclick whether correct answer or not - event listner
- * If correct - return CORRECT! for 500 milliseconds and advance to next question
- * If incorrect - return WRONG!
+ * If correct - return 'CORRECT!' and change the body color to green
+ * If incorrect - return 'WRONG!' and change the body color to red
  **/
-
-
-
 
 function checkAnswer() {
     if (this.textContent === newFlags[currentFlagIndex].country) {
-        let correct = `CORRECT!`
-        document.getElementById('result').innerHTML = correct;
+        let correct = true
+        let correctAnswer = `CORRECT!`
+        document.getElementById('result').innerHTML = correctAnswer;
         nextButton.classList.remove('hide');
-        setStatusClass(document.body, correct)
-        increaseCorrectScore();
+        setStatusClass(document.body, correct);
+        increaseScore();
     } else {
-        let incorrect = `WRONG!`
-        document.getElementById('result').innerHTML = incorrect;
+        let wrong = false
+        let wrongAnswer = `WRONG!`
+        document.getElementById('result').innerHTML = wrongAnswer;
         nextButton.classList.remove('hide');
-        setStatusClass(document.body, wrong)
+        setStatusClass(document.body, wrong);
     }
 }
 /**
  * Gets the current score from the DOM and increments it by 1
  */
-function increaseCorrectScore() {
+function increaseScore() {
     let currentScore = parseInt(document.getElementById('correct').innerText);
     document.getElementById('correct').innerText = ++currentScore;
 }
-
+/**
+ * Adds a class to the body depending on whether the answer is correct or wrong
+ * Allows the body color to be changed depending on correct or wrong answers
+ */
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {

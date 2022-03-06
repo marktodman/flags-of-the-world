@@ -160,7 +160,7 @@ body.wrong {
 
 /* NEXT BUTTON */
 
-.next-btn {
+.start-btn, .next-btn {
     margin: 10px auto;
     background-color: #1D3557;
     color: whitesmoke;

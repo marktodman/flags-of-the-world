@@ -870,5 +870,3 @@ console.log(flags[0].country);
 
 
 
-
-

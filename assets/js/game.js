@@ -1,5 +1,8 @@
-const nextButton = document.getElementById('next-question');
+const startButton = document.getElementById('start-button');
+const nextButton = document.getElementById('next-button');
+const answerButtons = document.getElementById('answer-buttons');
 
+nextButton.addEventListener('click', buildNextQuestionArray);
 /**
  * Set 60 second countdown timer. Code modified from Grepper: https://www.codegrepper.com/code-examples/javascript/add+countdown+timer+to+javascript+quiz
  */
@@ -57,8 +60,8 @@ let allAnswers = buildFullAnswerArray();
 console.log(allAnswers);
 
 /** 
-* Shuffle the allAnswers array so that the order of the countries in the answers will be randomised
-**/
+ * Shuffle the allAnswers array so that the order of the countries in the answers will be randomised
+ **/
 function createShuffledAnswers(array) {
     var currentIndex = array.length,
         temporaryValue, randomIndex;
@@ -76,39 +79,20 @@ let finalAnswers = createShuffledAnswers(allAnswers);
 console.log(finalAnswers);
 
 
-//   Need to iterate through the above adding one each time DO/WHILE TIMER loop?? Although the image comes from +1 on newFlags and the answers come from finalAnswers. checkAnswer will need some thought as the game continues...
+    document.getElementById('flag').src = newFlags[currentFlagIndex].image;
 
-document.getElementById('answer-1').innerText = finalAnswers[0];
-document.getElementById('answer-2').innerText = finalAnswers[1];
-document.getElementById('answer-3').innerText = finalAnswers[2];
-document.getElementById('flag').src = newFlags[currentFlagIndex].image;
+    let answer1 = document.getElementById('answer-1');
+    let answer2 = document.getElementById('answer-2');
+    let answer3 = document.getElementById('answer-3');
 
-// Take one correct country from the shuffled array using index[0] and then plus one for each new set of questions. Display flag from index[0] in div
-// Take two incorrect countries from the shuffled array using index [60] and index [120] and then plus one for each new set of questions
-// Add all of them to an array - the correct country plus two incorrect countries
-// Create a new random array from the newly created array of three
+    answer1.innerText = finalAnswers[0];
+    answer2.innerText = finalAnswers[1];
+    answer3.innerText = finalAnswers[2];
 
+    answer1.addEventListener('click', checkAnswer);
+    answer2.addEventListener('click', checkAnswer);
+    answer3.addEventListener('click', checkAnswer);
 
-
-// let randomCountryOne = Math.floor(Math.random() * flags.length);
-// let randomCountryTwo = Math.floor(Math.random() * flags.length);
-// let randomCountryThree = Math.floor(Math.random() * flags.length);
-
-// console.log(flags[randomCountryOne].country);
-// console.log(flags[randomCountryTwo].country);
-// console.log(flags[randomCountryThree].country);
-
-// The above code failed as received two countries the same in one instance...Ireland!
-// ? If using this method, use a if loop to check if the values are the different...if true use random country, if flase run again?
-
-
-let answer1 = document.getElementById('answer-1');
-let answer2 = document.getElementById('answer-2');
-let answer3 = document.getElementById('answer-3');
-
-answer1.addEventListener('click', checkAnswer);
-answer2.addEventListener('click', checkAnswer);
-answer3.addEventListener('click', checkAnswer);
 
 /** 
  * Check button onclick whether correct answer or not - event listner
@@ -121,17 +105,18 @@ function checkAnswer() {
         let correct = true
         let correctAnswer = `CORRECT!`
         document.getElementById('result').innerHTML = correctAnswer;
-        nextButton.classList.remove('hide');
         setStatusClass(document.body, correct);
         increaseScore();
     } else {
         let wrong = false
         let wrongAnswer = `WRONG!`
         document.getElementById('result').innerHTML = wrongAnswer;
-        nextButton.classList.remove('hide');
         setStatusClass(document.body, wrong);
     }
+    nextButton.classList.remove('hide');
+    answerButtons.classList.add('hide');
 }
+
 /**
  * Gets the current score from the DOM and increments it by 1
  */
@@ -140,8 +125,8 @@ function increaseScore() {
     document.getElementById('correct').innerText = ++currentScore;
 }
 /**
- * Adds a class to the body depending on whether the answer is correct or wrong
- * Allows the body color to be changed depending on correct or wrong answers
+ * Adds a class to the body depending on whether the answer is correct or wrong. Allows the body color to be changed depending on correct or wrong answers.
+ * Adapted from Web Dev Simplified YouTube Video: https://www.youtube.com/watch?v=riDzcEQbX6k
  */
 function setStatusClass(element, correct) {
     clearStatusClass(element)
@@ -152,33 +137,31 @@ function setStatusClass(element, correct) {
     }
 }
 
+/**
+ * Resets class status on body. Used when setting the nextQuestion()
+ * Adapted from Web Dev Simplified YouTube Video: https://www.youtube.com/watch?v=riDzcEQbX6k
+ */
 function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
 
-// let nextFlag = document.getElementById('next-question');
-// nextFlag.addEventListener('click', nextQuestion);
+function resetState() {
+    clearStatusClass(document.body);
+    nextButton.classList.add('hide');
+}
 
-// function nextQuestion(){
-//     createNewFlags();
-//     buildFullAnswerArray();
-//     createShuffledAnswers();
-// }
+function buildNextQuestionArray() {
+    currentFlagIndex = ++currentFlagIndex;
+    wrongFlagIndex = ++wrongFlagIndex;
+    anotherWrongFlagIndex = ++anotherWrongFlagIndex;
+    let nextQuestionArray = []; {
+        nextQuestionArray.push(newFlags[currentFlagIndex].country);
+        nextQuestionArray.push(newFlags[wrongFlagIndex].country);
+        nextQuestionArray.push(newFlags[anotherWrongFlagIndex].country);
+    }
+    return nextQuestionArray
+}
 
-// function buildNextQuestionArray() {
-//     let nextQuestionArray = []; 
-//     for (question of nextQuestionArray) {
-//         nextQuestionArray.push(newFlags[0++].country);
-//         nextQuestionArray.push(newFlags[60++].country);
-//         nextQuestionArray.push(newFlags[120++].country);
-//     }
-//     return nextQuestionArray
-// }
-
-// let nextQuestion = buildNextQuestionArray(newFlags);
-// console.log(nextQuestion);
-
-// function nextQuestion() {
-//     if ()
-//  }
+let nextAnswers = buildNextQuestionArray();
+console.log(nextAnswers);

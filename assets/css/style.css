@@ -15,7 +15,7 @@ body {
     padding: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #A8DADC;
+    background-color: #F1FAEE;
 }
 
 /* LOGO */
@@ -66,7 +66,7 @@ body {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
-    background-color: #F1FAEE;
+    background-color: #A8DADC;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -138,8 +138,9 @@ body.wrong {
 
 .btn {
     border: 1px solid hsl(203, 39, 25);
-    background-color: #457B9D;
+    background-color: #1D3557;
     color: whitesmoke;
+    font-size: 1.10rem;
     border-radius: 5px;
     padding: 5px 10px;
     outline: none;

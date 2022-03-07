@@ -15,9 +15,22 @@ nextButton.addEventListener('click', () => {
     currentFlagIndex++;
     setNextFlag();
 })
+
+function startGame() {
+    startTimer();
+    startButton.classList.add('hide');
+    shuffledFlags = flagsArray.sort(() => Math.random() - 0.5);
+    currentFlagIndex = 0
+    timerElement.classList.remove('hide');
+    flagContainer.classList.remove('hide');
+    answerButtons.classList.remove('hide');
+    setNextFlag();
+}
+
 /**
  * Set 60 second countdown timer. Code modified from Grepper: https://www.codegrepper.com/code-examples/javascript/add+countdown+timer+to+javascript+quiz
  */
+function startTimer() {
 let count = 10;
 let interval = setInterval(function () {
     timerElement.innerHTML = count;
@@ -27,17 +40,11 @@ let interval = setInterval(function () {
         timerElement.innerHTML = 'GAME OVER';
         flagContainer.classList.add('hide');
         answerButtons.classList.add('hide');
+        startButton.classList.remove('hide');
+        nextButton.classList.add('hide');
+        startButton.innerText = 'PLAY AGAIN >>';
     }
 }, 1000);
-
-function startGame() {
-    startButton.classList.add('hide');
-    shuffledFlags = flagsArray.sort(() => Math.random() - 0.5);
-    currentFlagIndex = 0
-    timerElement.classList.remove('hide');
-    flagContainer.classList.remove('hide');
-    answerButtons.classList.remove('hide');
-    setNextFlag();
 }
 
 function setNextFlag() {
@@ -88,7 +95,6 @@ function selectAnswer(e) {
     nextButton.classList.remove('hide');
     answerButtons.classList.add('hide');
 }
-
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)

@@ -7,9 +7,9 @@ const flagElement = document.getElementById('flag');
 const resultElement = document.getElementById('result');
 let scoreElement = document.getElementById('score');
 
-let shuffledFlags, currentFlagIndex
+let shuffledFlags, currentFlagIndex;
 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
     currentFlagIndex++;
     setNextFlag();
@@ -17,7 +17,7 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
     startButton.classList.add('hide');
-    shuffledFlags = flagsOne.sort(() => Math.random() - 0.5);
+    shuffledFlags = flagsArray.sort(() => Math.random() - 0.5);
     currentFlagIndex = 0
     timerElement.classList.remove('hide');
     flagContainer.classList.remove('hide');
@@ -36,14 +36,14 @@ function setNextFlag() {
 function showFlag(flag) {
     flagElement.src = flagsOne[currentFlagIndex].image
     flag.answers.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerText = answer.text
+        const button = document.createElement('button');
+        button.innerText = answer.text;
         button.classList.add('btn')
         if (answer.correct) {
             button.dataset.correct = answer.correct
         }
-        button.addEventListener('click', selectAnswer)
-        answerButtons.appendChild(button)
+        button.addEventListener('click', selectAnswer);
+        answerButtons.appendChild(button);
     })
 }
 

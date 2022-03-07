@@ -6,6 +6,7 @@ const answerButtons = document.getElementById('answer-buttons');
 const flagElement = document.getElementById('flag');
 const resultElement = document.getElementById('result');
 let scoreElement = document.getElementById('score');
+const playerName = document.getElementById('player-name');
 
 let shuffledFlags, currentFlagIndex;
 
@@ -14,6 +15,20 @@ nextButton.addEventListener('click', () => {
     currentFlagIndex++;
     setNextFlag();
 })
+/**
+ * Set 60 second countdown timer. Code modified from Grepper: https://www.codegrepper.com/code-examples/javascript/add+countdown+timer+to+javascript+quiz
+ */
+let count = 10;
+let interval = setInterval(function () {
+    timerElement.innerHTML = count;
+    count--;
+    if (count === 0) {
+        clearInterval(interval);
+        timerElement.innerHTML = 'GAME OVER';
+        flagContainer.classList.add('hide');
+        answerButtons.classList.add('hide');
+    }
+}, 1000);
 
 function startGame() {
     startButton.classList.add('hide');
@@ -34,7 +49,7 @@ function setNextFlag() {
 }
 
 function showFlag(flag) {
-    flagElement.src = flagsOne[currentFlagIndex].image
+    flagElement.src = flagsArray[currentFlagIndex].image
     flag.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;

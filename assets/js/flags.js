@@ -3303,7 +3303,7 @@ const flagsArray = [{
         ]
     },
     {
-        image: 'assets/images/vs.webp',
+        image: 'assets/images/ws.webp',
         answers: [{
                 text: 'Samoa',
                 correct: true

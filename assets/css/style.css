@@ -137,6 +137,7 @@ body.wrong {
     border-radius: 5px;
     padding: 5px 10px;
     outline: none;
+    min-width: 160px;
 }
 
 .btn:hover {
@@ -180,6 +181,7 @@ body.wrong {
 .result {
     margin: 10px auto;
     text-transform: uppercase;
+    text-align: center;
     font-size: 1.25rem;
     font-weight: 600;
 }

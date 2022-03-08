@@ -15,9 +15,9 @@ let shuffledFlags, currentFlagIndex, currentScore, count;
 // Starts the game on click of start button. Moves game through flags on click of next button. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
-        currentFlagIndex++; // Move the shuffled flags array on by one each time next button is clicked
-        setNextFlag(); // call function to build next flag and set answers buttons
-   
+    currentFlagIndex++; // Move the shuffled flags array on by one each time next button is clicked
+    setNextFlag(); // call function to build next flag and set answers buttons
+
 })
 
 //  Starts timer countdown. Creates shuffled flags array from flags.js. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
@@ -38,16 +38,16 @@ function startGame() {
 
 //  Set 60 second countdown timer. Code modified from Grepper: https://www.codegrepper.com/code-examples/javascript/add+countdown+timer+to+javascript+quiz
 function startTimer() {
-let count = 60; // 60 second timer
-let interval = setInterval(function () {
-    timerElement.innerHTML = count;
-    count--;
-    if (count === 0) { // Take action once the timer reaches zero
-        clearInterval(interval);
-        flagElement.src = ""
-        gameOver(); 
-    }
-}, 1000);
+    let count = 60; // 60 second timer
+    let interval = setInterval(function () {
+        timerElement.innerHTML = count;
+        count--;
+        if (count === 0) { // Take action once the timer reaches zero
+            clearInterval(interval);
+            flagElement.src = ""
+            gameOver();
+        }
+    }, 1000);
 }
 
 // Create a start new game function 
@@ -64,7 +64,7 @@ function setNextFlag() {
 // Show the flag and the answer buttons. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
 function showFlag(flag) {
     flagElement.src = flagsArray[currentFlagIndex].image // Set the flag image
-    flag.answers.forEach(answer => { 
+    flag.answers.forEach(answer => {
         const button = document.createElement('button'); // Create the answer buttons
         button.innerText = answer.text; // Put the country name in the buttons
         button.classList.add('btn') // Add the class to style buttons
@@ -129,7 +129,7 @@ function clearStatusClass(element) {
 
 function gameOver() {
     timerElement.innerHTML = 'GAME OVER';
-    resultElement.classList.remove('hide'); 
+    resultElement.classList.remove('hide');
     resultElement.innerHTML = `Congratulations ${playerName.value} you scored ${currentScore}`;
     document.body.classList.remove('correct');
     document.body.classList.remove('wrong');

@@ -27,34 +27,14 @@ body {
     letter-spacing: 0.1rem;
 }
 
-/* NAV */
-
-#menu {
-    letter-spacing: 0.3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#menu li {
-    list-style-type: none;
-    margin: 1.25rem;
-}
-
-#menu a {
+#logo a {
     text-decoration: none;
-    text-transform: uppercase;
-    color: inherit;
 }
 
-#menu a:hover {
+#logo a:hover {
     background-color: #1d3557;
     color: whitesmoke;
-    padding: 5px;
-}
-
-.current-page {
-    border-bottom: 1px solid #1d3557;
+    padding: 10px;
 }
 
 /* GAME CONTAINER STYLING */
@@ -165,7 +145,8 @@ body.wrong {
 
 /* NEXT BUTTON */
 
-.start-btn, .next-btn {
+.start-btn,
+.next-btn {
     margin: 10px auto;
     background-color: #1D3557;
     color: whitesmoke;
@@ -202,4 +183,3 @@ body.wrong {
     font-size: 1.25rem;
     font-weight: 600;
 }
-

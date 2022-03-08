@@ -38,12 +38,13 @@ function startGame() {
 
 //  Set 60 second countdown timer. Code modified from Grepper: https://www.codegrepper.com/code-examples/javascript/add+countdown+timer+to+javascript+quiz
 function startTimer() {
-let count = 10; // 60 second timer
+let count = 60; // 60 second timer
 let interval = setInterval(function () {
     timerElement.innerHTML = count;
     count--;
     if (count === 0) { // Take action once the timer reaches zero
         clearInterval(interval);
+        flagElement.src = ""
         gameOver(); 
     }
 }, 1000);
@@ -54,7 +55,7 @@ let interval = setInterval(function () {
 // Gets ready to set the next flag and calls the showFlag function. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
 function setNextFlag() {
     resetState(); // Reset the game container to be ready for new flag and answers
-    flagContainer.classList.remove('hide');
+    // flagContainer.classList.remove('hide'); // Show the flags
     answerButtons.classList.remove('hide');
     resultElement.classList.add('hide');
     showFlag(shuffledFlags[currentFlagIndex]); // Call the function to show the next flag and create answer buttons from shuffled flags array
@@ -132,6 +133,7 @@ function gameOver() {
     resultElement.innerHTML = `Congratulations ${playerName.value} you scored ${currentScore}`;
     document.body.classList.remove('correct');
     document.body.classList.remove('wrong');
+    flagElement.src = ""
     nextButton.classList.add('hide');
     flagContainer.classList.add('hide');
     answerButtons.classList.add('hide');

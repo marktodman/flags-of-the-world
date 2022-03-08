@@ -20,42 +20,44 @@
 </head>
 
 <body>
+    <!-- LOGO AND NAV -->
     <header>
         <!-- LOGO -->
         <div>
             <h1 id="logo">Flags of the World</h1>
         </div>
-        <!-- NAV -->
-        <nav>
-            <ul id="menu">
-                <li>
-                    <a href="index.html" class="current-page">Home</a>
-                </li>
-                <li>
-                    <a href="play.html">Play</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!-- MAIN CONTENT -->
-    <section>
-        <div class="container">
-            <!-- <h2>Welcome to Flags of the World</h2>
+       
+    <!-- GAME CONTAINER -->
+    <div class="container">
+        <div id="timer" class="hide"></div>
+        <div id="intro-text" class="intro">
+            <h2>Welcome to Flags of the World</h2>
             <p>The fun game that tests your knowledge about the flags of nations around the World.</p>
             <p>Test yourself against more than 200 flags!</p>
             <p>How many can you get in 60 seconds?</p>
-            
-            <!-- NAME INPUT AND GAME START -->
-            <!-- <div>
-                <label for="fname">Enter your name and click PLAY to begin:</label>
-                <input type="text" id="player-name" placeholder="Enter your name...">
-            </div> --> -->
-            <!-- START BUTTON -->
-            <a href="play.html" id="play" class="play-btn">Play Flags of the World!</a>
+
+            <!-- NAME INPUT -->
+            <div>
+                <label for="fname">Enter your name and click to START to begin the timer:</label>
+                <p><input type="text" id="player-name" class="name-input" placeholder="Enter your name..."></p>
+            </div>
         </div>
-    </section>
+        <!-- GAME AREA -->
+        <div id="flag-container" class="flag"><img src="" id="flag"></div>
+        <div id="answer-buttons" class="answer-box hide">
+            <button class="btn" id="answer-1">Country 1</button>
+            <button class="btn" id="answer-2">Country 2</button>
+            <button class="btn" id="answer-3">Country 3</button>
+        </div>
+        <div id="result" class="result hide"></div>
+        <div class="answer-box"><button class="start-btn" id="start-button">Start >></button></div>
+        <div class="answer-box"><button class="next-btn hide" id="next-button">Next flag >></button></div>
+        <div id="score-area" class="score hide">Score: <span id="score" class="score">0</span></div>
+    </div>
+
     <!-- SCRIPTS -->
-    <!-- <script src="assets/js/flags.js"></script>
-    <script src="assets/js/game.js"></script> -->
+    <script src="assets/js/flags.js"></script>
+    <script src="assets/js/game.js"></script>
 </body>
+
 </html>

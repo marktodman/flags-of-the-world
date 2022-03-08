@@ -44,7 +44,7 @@ let interval = setInterval(function () {
     count--;
     if (count === 0) { // Take action once the timer reaches zero
         clearInterval(interval);
-        gameOver();
+        gameOver(); 
     }
 }, 1000);
 }
@@ -127,12 +127,15 @@ function clearStatusClass(element) {
 }
 
 function gameOver() {
-    timerElement.innerHTML = 'GAME OVER'; 
+    timerElement.innerHTML = 'GAME OVER';
+    resultElement.classList.remove('hide'); 
+    resultElement.innerHTML = `Congratulations ${playerName.value} you scored ${currentScore}`;
+    document.body.classList.remove('correct');
+    document.body.classList.remove('wrong');
     nextButton.classList.add('hide');
     flagContainer.classList.add('hide');
     answerButtons.classList.add('hide');
     scoreSection.classList.add('hide')
     startButton.classList.remove('hide');
-    resultElement.innerHTML = `Congratulations ${playerName.value} you scored ${currentScore}`;
     startButton.innerText = 'PLAY AGAIN >>';
 }

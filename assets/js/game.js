@@ -41,7 +41,7 @@ function startGame() {
 
 //  Set 60 second countdown timer. Code modified from Grepper: https://www.codegrepper.com/code-examples/javascript/add+countdown+timer+to+javascript+quiz
 function startTimer() {
-    let count = 10; // 60 second timer
+    let count = 60; // 60 second timer
     let interval = setInterval(function () {
         timerElement.innerHTML = count;
         count--;

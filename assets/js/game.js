@@ -1,3 +1,4 @@
+const navElement = document.getElementById('menu');
 const introElement = document.getElementById('intro-text');
 const startButton = document.getElementById('start-button');
 const nextButton = document.getElementById('next-button');
@@ -23,6 +24,7 @@ nextButton.addEventListener('click', () => {
 //  Starts timer countdown. Creates shuffled flags array from flags.js. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
 function startGame() {
     startTimer(); // Call timer function
+    navElement.classList.remove('hide'); // Show the home link so that the player can always restart
     startButton.classList.add('hide'); // Hide the start button for the rest of the game
     introElement.classList.add('hide'); // Hide the intro text on start
     scoreSection.classList.remove('hide'); // Show the score

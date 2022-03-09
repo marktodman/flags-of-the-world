@@ -37,6 +37,26 @@ body {
     padding: 10px;
 }
 
+/* NAV */
+
+#menu {
+    letter-spacing: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 1.0rem 0;
+}
+
+#menu a {
+    text-decoration: none
+}
+
+#menu a:hover {
+    background-color: #1d3557;
+    color: whitesmoke;
+    padding: 10px;
+}
+
 /* GAME CONTAINER STYLING */
 
 .container {

@@ -26,7 +26,11 @@
         <div>
             <h1 id="logo"><a href="index.html">Flags of the World</a></h1>
         </div>
-
+        <!-- NAV -->
+        <nav>
+            <a href="index.html" id="menu" class="hide">Home</a>
+        </nav>
+    </header>
         <!-- GAME CONTAINER -->
         <div class="container">
             <div id="timer" class="hide"></div>
@@ -35,7 +39,6 @@
                 <p>The fun game that tests your knowledge about the flags of nations around the World.</p>
                 <p>Test yourself against more than 200 flags!</p>
                 <p>How many can you get in 60 seconds?</p>
-
                 <!-- NAME INPUT -->
                 <div>
                     <label for="fname">Enter your name and click to START to begin the timer:</label>
@@ -44,20 +47,22 @@
             </div>
             <!-- GAME AREA -->
             <div id="flag-container" class="flag"><img src="" id="flag"></div>
+            <!-- ANSWER BUTTONS -->
             <div id="answer-buttons" class="answer-box hide">
-                <button class="btn" id="answer-1">Country 1</button>
-                <button class="btn" id="answer-2">Country 2</button>
-                <button class="btn" id="answer-3">Country 3</button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
             </div>
+            <!-- RESULT AREA -->
             <div id="result" class="result hide"></div>
+            <!-- CONTROLS AREA -->
             <div class="answer-box"><button class="start-btn" id="start-button">Start >></button></div>
             <div class="answer-box"><button class="next-btn hide" id="next-button">Next flag >></button></div>
+            <!-- SCORE AREA -->
             <div id="score-area" class="score hide">Score: <span id="score" class="score">0</span></div>
         </div>
-
         <!-- SCRIPTS -->
         <script src="assets/js/flags.js"></script>
         <script src="assets/js/game.js"></script>
 </body>
-
 </html>

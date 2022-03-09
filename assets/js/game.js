@@ -133,6 +133,7 @@ function clearStatusClass(element) {
     element.classList.remove('wrong');
 }
 
+// Set up the game over position with the Player Name and Score. Option to start again or restart with a new player
 function gameOver() {
     timerElement.innerHTML = 'GAME OVER';
     resultElement.classList.remove('hide');
@@ -152,6 +153,7 @@ function gameOver() {
 
 newPlayer.addEventListener('click', reload);
 
+// Set the restart position for a new player
 function reload() {
     window.location.replace("index.html");
 }

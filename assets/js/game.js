@@ -18,37 +18,36 @@ let shuffledFlags, currentFlagIndex, currentScore;
 // Starts the game on click of start button. Moves game through flags on click of next button. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
-    currentFlagIndex++; // Move the shuffled flags array on by one each time next button is clicked
-    setNextFlag(); // call function to build next flag and set answers buttons
+    currentFlagIndex++; 
+    setNextFlag(); 
 
 });
 
-//  Starts timer countdown. Creates shuffled flags array from flags.js. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
+//  Starts the game and sets the container elements. Starts timer countdown. Creates shuffled flags array from flags.js. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
 function startGame() {
-    startTimer(); // Call timer function
-    navElement.classList.remove('hide'); // Show the home link so that the player can always restart
-    startButton.classList.add('hide'); // Hide the start button for the rest of the game
-    introElement.classList.add('hide'); // Hide the intro text on start
-    scoreSection.classList.remove('hide'); // Show the score
-    shuffledFlags = flagsArray.sort(() => Math.random() - 0.5); // Shuffle all flags and answers
-    currentFlagIndex = 0; // Set the starting point in the shuffled array
-    scoreElement.innerText = 0; // Rest the score to zero each time the game
-    timerElement.classList.remove('hide'); // Make the timer visible
-    flagContainer.classList.remove('hide'); // Show the flags
-    answerButtons.classList.remove('hide'); // Make the question buttons visible
-    newPlayer.classList.add('hide'); // Hide the New Player button on restart
-    checkeredFlagElement.classList.add('hide'); // Hide the checkered flag on restart
-    setNextFlag(); // Call the next flag function
+    startTimer(); 
+    navElement.classList.remove('hide'); 
+    startButton.classList.add('hide'); 
+    introElement.classList.add('hide'); 
+    scoreSection.classList.remove('hide'); 
+    shuffledFlags = flagsArray.sort(() => Math.random() - 0.5); 
+    currentFlagIndex = 0; 
+    scoreElement.innerText = 0; 
+    timerElement.classList.remove('hide'); 
+    flagContainer.classList.remove('hide'); 
+    answerButtons.classList.remove('hide'); 
+    newPlayer.classList.add('hide'); 
+    checkeredFlagElement.classList.add('hide'); 
+    setNextFlag(); 
 }
-
 
 //  Set 60 second countdown timer. Code modified from Grepper: https://www.codegrepper.com/code-examples/javascript/add+countdown+timer+to+javascript+quiz
 function startTimer() {
-    let count = 60; // 60 second timer
+    let count = 60; 
     let interval = setInterval(function () {
         timerElement.innerHTML = count;
         count--;
-        if (count === 0) { // Take action once the timer reaches zero
+        if (count === 0) { 
             clearInterval(interval);
             flagElement.src = "";
             gameOver();
@@ -56,33 +55,30 @@ function startTimer() {
     }, 1000);
 }
 
-// Create a start new game function 
-
 // Gets ready to set the next flag and calls the showFlag function. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
 function setNextFlag() {
-    resetState(); // Reset the game container to be ready for new flag and answers
-    // flagContainer.classList.remove('hide'); // Show the flags
+    resetState(); 
     answerButtons.classList.remove('hide');
     resultElement.classList.add('hide');
-    showFlag(shuffledFlags[currentFlagIndex]); // Call the function to show the next flag and create answer buttons from shuffled flags array
+    showFlag(shuffledFlags[currentFlagIndex]); 
 }
 
-// Show the flag and the answer buttons. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
+// Show the flag and create the answer buttons. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
 function showFlag(flag) {
-    flagElement.src = flagsArray[currentFlagIndex].image; // Set the flag image
+    flagElement.src = flagsArray[currentFlagIndex].image; 
     flag.answers.forEach(answer => {
-        const button = document.createElement('button'); // Create the answer buttons
-        button.innerText = answer.text; // Put the country name in the buttons
-        button.classList.add('btn'); // Add the class to style buttons
+        const button = document.createElement('button'); 
+        button.innerText = answer.text; 
+        button.classList.add('btn'); 
         if (answer.correct) {
-            button.dataset.correct = answer.correct; // Set the correct answer
+            button.dataset.correct = answer.correct; 
         }
-        button.addEventListener('click', checkAnswer); // Check the answer on click of a button
-        answerButtons.appendChild(button); // Create the buttons as new elements
+        button.addEventListener('click', checkAnswer); 
+        answerButtons.appendChild(button); 
     });
 }
 
-// Clear Status to set up for next flag. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
+// Clear status to set up for next flag. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
 function resetState() {
     clearStatusClass(document.body);
     nextButton.classList.add('hide');
@@ -101,14 +97,14 @@ function checkAnswer(e) {
     });
     if (correct) {
         resultElement.classList.remove('hide');
-        resultElement.innerHTML = `CORRECT!`; // Tell the player they are correct
+        resultElement.innerHTML = `CORRECT!`; 
         increaseScore();
     } else {
         resultElement.classList.remove('hide');
-        resultElement.innerHTML = `WRONG!`; // Tell the player they are wrong
+        resultElement.innerHTML = `WRONG!`; 
     }
-    nextButton.classList.remove('hide'); // Allow the user to control the next flag
-    answerButtons.classList.add('hide'); // Remove the answer buttons so that the player cannot keep clicking to either increase score or find correct answer
+    nextButton.classList.remove('hide'); 
+    answerButtons.classList.add('hide'); 
 }
 
 // Set the background color based on correct or wrong answers. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
@@ -121,7 +117,7 @@ function setStatusClass(element, correct) {
     }
 }
 
-// Increase the score by one for a correct answer. No action for a wrong answer
+// Increase the score by one for a correct answer
 function increaseScore() {
     currentScore = parseInt(scoreElement.innerText);
     scoreElement.innerText = ++currentScore;
@@ -133,7 +129,7 @@ function clearStatusClass(element) {
     element.classList.remove('wrong');
 }
 
-// Set up the game over position with the Player Name and Score. Option to start again or restart with a new player
+// Set up the game over position with the Player Name and Score. Option to start again as same player or restart as a new player
 function gameOver() {
     timerElement.innerHTML = 'GAME OVER';
     resultElement.classList.remove('hide');

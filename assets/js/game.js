@@ -1,4 +1,4 @@
-const navElement = document.getElementById('menu');
+const navElement = document.getElementById('home');
 const introElement = document.getElementById('intro-text');
 const startButton = document.getElementById('start-button');
 const nextButton = document.getElementById('next-button');

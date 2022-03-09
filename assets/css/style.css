@@ -136,8 +136,6 @@ body.wrong {
     padding: 10px;
 }
 
-/* GAME AREA is .container class used on HOME PAGE*/
-
 /* ANSWER BUTTONS */
 
 .answer-box {
@@ -164,7 +162,7 @@ body.wrong {
     border-color: black;
 }
 
-/* NEXT BUTTON */
+/* START, NEXT, NEW PLAYER BUTTON */
 
 .start-btn,
 .next-btn {

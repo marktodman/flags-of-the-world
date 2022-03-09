@@ -10,6 +10,7 @@ const resultElement = document.getElementById('result');
 const scoreSection = document.getElementById('score-area');
 const scoreElement = document.getElementById('score');
 const playerName = document.getElementById('player-name');
+const newPlayer = document.getElementById('new-player');
 
 let shuffledFlags, currentFlagIndex, currentScore, count;
 
@@ -40,7 +41,7 @@ function startGame() {
 
 //  Set 60 second countdown timer. Code modified from Grepper: https://www.codegrepper.com/code-examples/javascript/add+countdown+timer+to+javascript+quiz
 function startTimer() {
-    let count = 60; // 60 second timer
+    let count = 10; // 60 second timer
     let interval = setInterval(function () {
         timerElement.innerHTML = count;
         count--;
@@ -142,4 +143,11 @@ function gameOver() {
     scoreSection.classList.add('hide')
     startButton.classList.remove('hide');
     startButton.innerText = 'PLAY AGAIN >>';
+    newPlayer.classList.remove('hide');
+}
+
+newPlayer.addEventListener('click', reload);
+
+function reload() {
+    window.location.replace("index.html");
 }

@@ -11,6 +11,7 @@ const scoreSection = document.getElementById('score-area');
 const scoreElement = document.getElementById('score');
 const playerName = document.getElementById('player-name');
 const newPlayer = document.getElementById('new-player');
+const checkeredFlagElement = document.getElementById('end');
 
 let shuffledFlags, currentFlagIndex, currentScore, count;
 
@@ -35,14 +36,15 @@ function startGame() {
     timerElement.classList.remove('hide'); // Make the timer visible
     flagContainer.classList.remove('hide'); // Show the flags
     answerButtons.classList.remove('hide'); // Make the question buttons visible
-    newPlayer.classList.add('hide');
+    newPlayer.classList.add('hide'); // Hide the New Player button on restart
+    checkeredFlagElement.classList.add('hide'); // Hide the checkered flag on restart
     setNextFlag(); // Call the next flag function
 }
 
 
 //  Set 60 second countdown timer. Code modified from Grepper: https://www.codegrepper.com/code-examples/javascript/add+countdown+timer+to+javascript+quiz
 function startTimer() {
-    let count = 10; // 60 second timer
+    let count = 60; // 60 second timer
     let interval = setInterval(function () {
         timerElement.innerHTML = count;
         count--;
@@ -134,8 +136,7 @@ function clearStatusClass(element) {
 function gameOver() {
     timerElement.innerHTML = 'GAME OVER';
     resultElement.classList.remove('hide');
-    resultElement.innerHTML = `<p>Congratulations ${playerName.value} you scored ${currentScore}</p>
-    <p><i class="fa-solid fa-flag-checkered fa-beat"></i></p>`;
+    resultElement.innerHTML = `Congratulations ${playerName.value} you scored ${currentScore}`;
     document.body.classList.remove('correct');
     document.body.classList.remove('wrong');
     flagElement.src = ""
@@ -146,6 +147,7 @@ function gameOver() {
     startButton.classList.remove('hide');
     startButton.innerText = 'PLAY AGAIN >>';
     newPlayer.classList.remove('hide');
+    checkeredFlagElement.classList.remove('hide');
 }
 
 newPlayer.addEventListener('click', reload);

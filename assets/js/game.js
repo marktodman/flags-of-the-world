@@ -35,13 +35,14 @@ function startGame() {
     timerElement.classList.remove('hide'); // Make the timer visible
     flagContainer.classList.remove('hide'); // Show the flags
     answerButtons.classList.remove('hide'); // Make the question buttons visible
+    newPlayer.classList.add('hide');
     setNextFlag(); // Call the next flag function
 }
 
 
 //  Set 60 second countdown timer. Code modified from Grepper: https://www.codegrepper.com/code-examples/javascript/add+countdown+timer+to+javascript+quiz
 function startTimer() {
-    let count = 60; // 60 second timer
+    let count = 10; // 60 second timer
     let interval = setInterval(function () {
         timerElement.innerHTML = count;
         count--;
@@ -133,7 +134,8 @@ function clearStatusClass(element) {
 function gameOver() {
     timerElement.innerHTML = 'GAME OVER';
     resultElement.classList.remove('hide');
-    resultElement.innerHTML = `Congratulations ${playerName.value} you scored ${currentScore}`;
+    resultElement.innerHTML = `<p>Congratulations ${playerName.value} you scored ${currentScore}</p>
+    <p><i class="fa-solid fa-flag-checkered fa-beat"></i></p>`;
     document.body.classList.remove('correct');
     document.body.classList.remove('wrong');
     flagElement.src = ""

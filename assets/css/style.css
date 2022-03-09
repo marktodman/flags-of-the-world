@@ -203,3 +203,11 @@ body.wrong {
     font-size: 1.25rem;
     font-weight: 600;
 }
+
+.result p {
+    margin: 10px auto;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+}

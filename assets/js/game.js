@@ -13,7 +13,7 @@ const playerName = document.getElementById('player-name');
 const newPlayer = document.getElementById('new-player');
 const checkeredFlagElement = document.getElementById('end');
 
-let shuffledFlags, currentFlagIndex, currentScore, count;
+let shuffledFlags, currentFlagIndex, currentScore;
 
 // Starts the game on click of start button. Moves game through flags on click of next button. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
 startButton.addEventListener('click', startGame);
@@ -21,7 +21,7 @@ nextButton.addEventListener('click', () => {
     currentFlagIndex++; // Move the shuffled flags array on by one each time next button is clicked
     setNextFlag(); // call function to build next flag and set answers buttons
 
-})
+});
 
 //  Starts timer countdown. Creates shuffled flags array from flags.js. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
 function startGame() {
@@ -31,8 +31,8 @@ function startGame() {
     introElement.classList.add('hide'); // Hide the intro text on start
     scoreSection.classList.remove('hide'); // Show the score
     shuffledFlags = flagsArray.sort(() => Math.random() - 0.5); // Shuffle all flags and answers
-    currentFlagIndex = 0 // Set the starting point in the shuffled array
-    scoreElement.innerText = 0 // Rest the score to zero each time the game
+    currentFlagIndex = 0; // Set the starting point in the shuffled array
+    scoreElement.innerText = 0; // Rest the score to zero each time the game
     timerElement.classList.remove('hide'); // Make the timer visible
     flagContainer.classList.remove('hide'); // Show the flags
     answerButtons.classList.remove('hide'); // Make the question buttons visible
@@ -50,7 +50,7 @@ function startTimer() {
         count--;
         if (count === 0) { // Take action once the timer reaches zero
             clearInterval(interval);
-            flagElement.src = ""
+            flagElement.src = "";
             gameOver();
         }
     }, 1000);
@@ -69,17 +69,17 @@ function setNextFlag() {
 
 // Show the flag and the answer buttons. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
 function showFlag(flag) {
-    flagElement.src = flagsArray[currentFlagIndex].image // Set the flag image
+    flagElement.src = flagsArray[currentFlagIndex].image; // Set the flag image
     flag.answers.forEach(answer => {
         const button = document.createElement('button'); // Create the answer buttons
         button.innerText = answer.text; // Put the country name in the buttons
-        button.classList.add('btn') // Add the class to style buttons
+        button.classList.add('btn'); // Add the class to style buttons
         if (answer.correct) {
-            button.dataset.correct = answer.correct // Set the correct answer
+            button.dataset.correct = answer.correct; // Set the correct answer
         }
         button.addEventListener('click', checkAnswer); // Check the answer on click of a button
         answerButtons.appendChild(button); // Create the buttons as new elements
-    })
+    });
 }
 
 // Clear Status to set up for next flag. Code adapted from Web Dev Simplified. Available on YouTube: https://www.youtube.com/watch?v=riDzcEQbX6k
@@ -98,7 +98,7 @@ function checkAnswer(e) {
     setStatusClass(document.body, correct);
     Array.from(answerButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
-    })
+    });
     if (correct) {
         resultElement.classList.remove('hide');
         resultElement.innerHTML = `CORRECT!`; // Tell the player they are correct
@@ -139,11 +139,11 @@ function gameOver() {
     resultElement.innerHTML = `Congratulations ${playerName.value} you scored ${currentScore}`;
     document.body.classList.remove('correct');
     document.body.classList.remove('wrong');
-    flagElement.src = ""
+    flagElement.src = "";
     nextButton.classList.add('hide');
     flagContainer.classList.add('hide');
     answerButtons.classList.add('hide');
-    scoreSection.classList.add('hide')
+    scoreSection.classList.add('hide');
     startButton.classList.remove('hide');
     startButton.innerText = 'PLAY AGAIN >>';
     newPlayer.classList.remove('hide');

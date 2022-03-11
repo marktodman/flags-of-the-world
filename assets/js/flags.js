@@ -2720,11 +2720,35 @@ const flagsArray = [{
     },
     {
         image: 'assets/images/se.webp',
-        country: 'Sweden',
+        answers: [{
+                text: 'Norway',
+                correct: false
+            },
+            {
+                text: 'Finland',
+                correct: false
+            },
+            {
+                text: 'Sweden',
+                correct: true
+            }
+        ]
     },
     {
         image: 'assets/images/sg.webp',
-        country: 'Singapore',
+        answers: [{
+                text: 'Singapore',
+                correct: true
+            },
+            {
+                text: 'Hong Kong',
+                correct: false
+            },
+            {
+                text: 'Taiwan',
+                correct: false
+            }
+        ]
     },
     {
         image: 'assets/images/si.webp',

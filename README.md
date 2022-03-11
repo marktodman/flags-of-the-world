@@ -130,7 +130,7 @@ The game is designed to work on large screens and screens down to around 250px a
 
 ## User Stories
 
-Testing of user stories was conducted throughout the build. Detailed User Stories can be [read here](userstories.md)
+Testing of user stories was conducted throughout the build. Detailed User Stories can be [read here](userstories.md).
 
 ## HTML Validation
 

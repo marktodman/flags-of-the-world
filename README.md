@@ -1,108 +1,226 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# FLAGS OF THE WORLD
 
-Welcome marktodman,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
+## By Mark Todman
 ---
 
-Happy coding!
+![Example of the application on multiple devices.](/assets/images/readme-images/amiresponsive-FOW.png)
+
+The deployed [Flags of the World website.](https://marktodman.github.io/flags-of-the-world/)
+
+The [GitHub repository.](https://github.com/marktodman/flags-of-the-world)
+
+---
+## USER EXPERIENCE (UX)
+---
+
+## Strategy
+
+Flags of the World is a fun game for users to test their knowledge against the clock about flags of the nations around the World. The site is simple and straightforward, fully focused on generating positive user engagement in repeatedly playing the game to increase their knowledge and beat their previous score. The game is desgined to challenge the user to set and beat their score, creating a new random set of flags for each 60 second game (from 216 flags). 
+
+### Target Audience:
+
+- People who want to learn more about flags of nations around the World
+- Users who want an engaging and challenging game
+- Users who want to challenge and compare their knowlege about flags of the World with their friends.
+
+## Scope
+
+Flags of the World is a single-purpose site, fully focused on the user experience of trying to identify as many flags of nations around the World as possible in 60 seconds.
+
+Ease-of-use is defined by mobile-first, responsive design, with limited navigation and site content fully focused on the game experience.
+
+The site includes the ability to input Player Name to deliver a personalised experience with the score returned at the end of the game. The game is easy to use and to restart after each 60 second countdown, encouraging the user to try and beat their previous score. There is also the option to change the player so that different players can swap between each set of 60 seconds.
+
+## Structure
+
+Flags of the World based on a mobile-first single page with three clear stages of the game:
+
+1. LANDING PAGE: the landing page contains the instructions, player name input and the start button.
+
+2. GAME PLAY: the game play section displays the countdown timer, the flag image, three answer buttons and the score.
+- After each button click the player receives feedback (Correct! or Wrong!), the score increments (for a correct answer), and there is a 'next' button to move to the next flag and set of answers
+
+3. GAME OVER: the game ends when the timer reaches zero. At the end of the game the named player is told their score and encouraged to either 'play again' or pass to a 'new player'.
+- Play again restarts the GAME PLAY section. 
+- New Player returns to the LANDING PAGE to enter a new player name and start the game again.
+
+## Features
+
+The site is designed to focus user attention and quickly and easily enter into the game play, which is why the site is on one mobile-friendly page. 
+
+The game is all on one page, within one game area container. Using one game area container facilitates site design that focuses user attention on the game area, whether on small (mobile) or large (desktop) screens. Styling, including colors and shadow have been used to make the game container standout on the page:
+
+![The game container on the landing page.](assets/images/readme-images/landing-page-FOW.png)
+
+![The game container during game play.](assets/images/readme-images/game-play-FOW.png)
+
+The landing page contains clear instructions to the user that they have 60 seconds to guess as many flags as possible. They are led to input their name through the design of the input box, which has shadow to make it stand out and placeholder information ('Enter your name...'). It is the clear to the user that they should click start, both through written instructions and the intuitive START>> button.
+
+![Starting the game: entering player name and the start button.](assets/images/readme-images/player-name-FOW.png)
+
+Once the START>> button is pressed the GAME PLAY layout loads in the game container. The GAME PLAY layout includes:
+- the countdown timer which starts at 60 seconds and counts down to zero
+- a randomly generated flag image which are all fixed width at 160px. There are 216 randomly generated flag images
+- three answer buttons which are generated from answers associated with each flag image
+- the score element which increases once a correct answer have been selected.
+
+![The GAME PLAY layout.](assets/images/readme-images/game-play-FOW.png)
+
+In addition to the changes in the GAME PLAY layout, Home navigation also becomes available as this allows the user to return to the first screen at any time during the game. This is critical to the user experience, as the alternative is to wait for the full timer to run down to restart for any reason. In addtion, the logo is also an active link which will return the user to the index.html page. Both of these elements have a hover function to make it clear to the user that they are active.
+
+![Home navigation appears during GAME PLAY.](assets/images/readme-images/home-FOW.png)
+
+![Home navigation with hover.](assets/images/readme-images/home-hover-FOW.png)
+
+![Logo.](assets/images/readme-images/logo-FOW.png)
+
+![Logo hover.](assets/images/readme-images/logo-hover-FOW.png)
+
+During GAME PLAY there is live user feedback on whether their chosen answer is CORRECT or WRONG:
+- If the chosen answer is CORRECT, the user will receive a message stating CORRECT!, the body of the page will become a green color and their score will increase by 1 and a NEXT FLAG>> button will appear so that they can advance the game.
+- If the chosen answer is WRONG, the user will receive a massage stating WRONG!, the body of the page will become a red color and a NEXT FLAG>> button will appear so that they can advance the game. There is no change in the score for a wrong answer.
+
+![GAME PLAY CORRECT.](assets/images/readme-images/game-play-correct-FOW.png)
+
+![GAME PLAY WRONG.](assets/images/readme-images/game-play-wrong-FOW.png)
+
+Once the timer has run to zero, the user is automatically moved to the GAME OVER layout. The GAME OVER layout includes the following features:
+- the timer displays GAME OVER
+- there is a checkered flag as a visual indication of the end of the game
+- there is a statement congratulating the player by name and providing them with their score
+- there are two options: 1) either to PLAY AGAIN>> as the same named player or 2) to play as a NEW PLAYER>>
+
+![GAME OVER layout.](assets/images/readme-images/game-over-FOW.png)
+
+If the user clicks PLAY AGAIN>> they are taken straight back into the GAME PLAY layout and the timer starts to countdown automatically. They will be presented with a new set of flags. Once the 60 second timer is complete the user will be taken to the GAME OVER page where their name and their new score will be presented.
+
+If the user clicks NEW PLAYER>> they are taken to the index.html page, which allows a new player name to be input and the game to be started again. Once the 60 second timer is complete the new user will be taken to the GAME OVER page where their name and their score will be presented.
+
+The game is designed to keep the user playing, either on their own to beat their previous score, or with a friend on the same device.
+
+## Visual Design
+
+The game is designed to work on screens down to around 250px which should mean that the site is fully responsive. 
+
+The visual design was chosen specifically to make the game play area stand out and to focus the user on the center of the screen. Effects such as shadow and button hover are utilised to provide emphasis and user feedback.
+
+The website is designed to be clean and clear for the user. The color palette was chosen as the colors are complimentary to many of the flags of the World, whilst also enabling contrast between elements [Coolors](https://coolors.co/). These colors were used throughout with darker colors for the text and lighter colors for the backgrounds. This design was inverted for the buttons to make them stand out with light text on a dark background/ 
+
+![Coolors color palette for Flags of the World.](/assets/images/readme-images/colors-FOW.png)
+
+Cabin Sketch was chosen for the logo as it is an informal font. As the site is designed for new investors and investors looking for new ideas, an informal font is used to make the user feel relaxed (unlike many other financial webites). Cabin Sketch is used for the logo and throughout the website in the section headers.
+
+![Logo with Cabin Sketch font.](/assets/images/readme-images/logo.png)
+
+Cabin, a sans-serif font, was chosen for the sub-section headers as this compliments the logo and section headers.
+
+Libre Baskerville, a serif font, was chosen for the main text as it is easy to read and offers a good contrast with the Cabin and Cabin Sketch.
+
+The sections and sub-sections appear as rows on smaller (less than 850px) screens. On larger (over 850px) screens the sections are in three sub-section columns. This design is repeated throughout the page and provides emphasis and balance.
+
+The sections are separated by rows of icons that visually emphasise the section text that has gone before. They serve to break up the sections and to reinforce the messaging.
+
+![Environmental Social and Governance icons.](/assets/images/readme-images/esg-icons.png) ![Impact Growth and Balance icons.](/assets/images/readme-images/igb-icons.png)
+
+--- 
+## TESTING
+---
+
+## HTML Validation
+
+The HTML code has been tested for errors with the [W3 HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarktodman.github.io%2Fsustainable-investing%2F) and passed with no errors.
+
+## CSS Validation
+
+The CSS code has been tested for errors with the [W3 CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarktodman.github.io%2Fsustainable-investing%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) and passed with no errors.
+
+## Accessibility 
+
+The website has been tested for accessbility using Lighthouse on Chrome DevTools and scored 100.
+
+![Extract from Lighthouse report.](/assets/images/readme-images/lighthouse.png)
+
+## Fixes
+
+There were a number of fixes identified during validation:
+
+1. Duplicate classes. Some classes had been duplicated in the HTML elements associated with the icons. The duplications were deleted.
+2. Font contrast. The icon fonts did not provide enough contrast. The font-family and font-color were changed to improve accessiblity.
+3. Input fields on Newsletter. The input fields were not labelled. Labels were added to improve accessibility.
+4. Image file size. The hero image was origianlly 4MB causing the site to load slowly. The image was resolution was reduced, compressed and converted to WebP format, which has improved performance.
+
+---
+## DEPLOYMENT
+---
+
+The site has been deployed through [GitHub Pages.](https://github.com/marktodman/flags-of-the-world)
+
+## Remote Deployment
+
+The steps to remote deployment via GitHub Pages are:
+
+1. Create an account at [GitHub](https://github.com/).
+2. Log into your GitHub account.
+3. Go to the GitHub repository for [Flags of the World](https://github.com/marktodman/flags-of-the-world).
+4. Click on 'Settings'.
+5. Select 'Pages' from the menu on the left-hand-side.
+6. Under 'Source' select 'Main' and click 'Save'.
+7. Notification that the site is published appears on the top of the pages section together with a [link to the site](https://marktodman.github.io/flags-of-the-world/).
+
+## Local Depoloyment
+
+The steps to make a local copy via GitHub pages are:
+
+1. Create an account at [GitHub](https://github.com/).
+2. Log into your GitHub account.
+3. Go to the GitHub repository for [Flags of the World](https://github.com/marktodman/flags-of-the-world).
+4. Click the green 'Code' button.
+5. Select your chosen clone format: HTTPS, SSH or GitHub CLI.
+6. Click the 'copy' button.
+7. Deploy the copy locally.
+
+## Forking the GitHub Repository
+
+To use this code and make changes without affecting the original code, it is possible to 'fork' the code on the GitHub repository through the following steps:
+
+1. Create an account at [GitHub](https://github.com/).
+2. Log into your GitHub account.
+3. Go to the GitHub repository for [Flags of the World](https://github.com/marktodman/flags-of-the-world).
+4. Click the 'Fork' button in the upper right hand corner of the page.
+5. A copy of the repository will be available in your own repository.
+
+---
+## FUTURE DEVELOPMENT IDEAS
+---
+
+There is room for further improvements in this game including:
+- A high score table
+- Saving of scores by player
+- User functionality to adjust the timer for longer or shorter intervals
+
+---
+## CREDITS
+---
+
+All content is originaly written by the site author, Mark Todman. Additional links to external material are provide in the website.
+
+[Scott Webb on Pexels](https://www.pexels.com/@scottwebb) provided the hero image.
+
+Icons were sourced from [Font Awesome](https://fontawesome.com/).
+
+[Tiny JPG](https://tinyjpg.com/) and [Compress.com](https://www.compresss.com/compress-webp.html) were utilised to compress images. [Cloud Convert](https://cloudconvert.com/jpg-to-webp) was used to convert JPG to WebP format to try and improve Performance.
+
+The scroll to top button was created using code taken directly from [W3 Schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp). The helpful community at [Stack Overflow](https://stackoverflow.com/questions/70734242/hidden-javascript-button-on-larger-screen) ensured that it would not display on larger screens.
+
+[Kevin Powell](https://www.youtube.com/user/KepowOb) provided invaluable guidance on CSS Grid.
+
+Example code and source database address from the [Code Institute](https://codeinstitute.net/) were utilised in the Newsletter sign up feature.
+
+Chris Quinn as Mentor and John Traas in Tutor Support at the [Code Institute](https://codeinstitute.net/) provided excellent direction and helped with resources to solve CSS Grid and Flexbox challenges.
+
+
+
+
+
+
+

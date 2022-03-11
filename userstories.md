@@ -18,7 +18,7 @@ As a first time user the site should have:
 
 ### Clear Instructions
 
-The landing page is clear and straightforward. This is a 60 second timed test to see how many flags I can guess. I should input my name and press START>>:
+The landing page is clear and straightforward. This is a 60 second timed test to see how many flags I can guess. I should input my name and press START>>.
 
 ![Clear instructions for the user.](assets/images/readme-images/landing-page-FOW.png)
 

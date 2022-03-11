@@ -128,7 +128,7 @@ body.wrong {
 }
 
 .btn {
-    border: 1px solid hsl(203, 39, 25);
+    border: 1px solid;
     background-color: #1D3557;
     color: whitesmoke;
     font-size: 1.10rem;

@@ -1,7 +1,6 @@
 # FLAGS OF THE WORLD
 
 ## By Mark Todman
----
 
 ![Example of the application on multiple devices.](/assets/images/readme-images/amiresponsive-FOW.png)
 
@@ -11,7 +10,7 @@ The [GitHub repository.](https://github.com/marktodman/flags-of-the-world)
 
 ---
 ## OVERVIEW
----
+
 
 1. [User Experience](#user-experience-ux)
 2. [Testing](#testing)
@@ -21,7 +20,7 @@ The [GitHub repository.](https://github.com/marktodman/flags-of-the-world)
 
 ---
 ## USER EXPERIENCE (UX)
----
+
 
 ## Strategy
 
@@ -128,7 +127,6 @@ The game is designed to work on large screens and screens down to around 250px a
 
 --- 
 ## TESTING
----
 
 ## User Stories
 
@@ -163,7 +161,6 @@ There were a number of fixes identified during validation:
 
 ---
 ## DEPLOYMENT
----
 
 The site has been deployed through [GitHub Pages.](https://github.com/marktodman/flags-of-the-world)
 
@@ -203,7 +200,6 @@ To use this code and make changes without affecting the original code, it is pos
 
 ---
 ## FUTURE DEVELOPMENT IDEAS
----
 
 There is an opportunity for further improvements in this game based on user feedback including:
 - A high score table
@@ -212,7 +208,6 @@ There is an opportunity for further improvements in this game based on user feed
 
 ---
 ## CREDITS
----
 
 The Flag images were downloaded for free from [Flagpedia.net](https://flagpedia.net/).
 

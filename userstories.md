@@ -8,7 +8,7 @@ User testing has been undertaken for:
 3. [Site Developer](#site-developer)
 
 ## First Time User
----
+
 As a first time user the site should have:
 1. Clear instructions
 2. Obvious controls
@@ -52,7 +52,7 @@ At the end of the game, there is a clear option to PLAY AGAIN>>.
 
 
 ## Repeat User
----
+
 As a repeat user the site should include the following:
 1. An option to restart the game 
 2. The chance to share the experience with a friend
@@ -82,7 +82,7 @@ Future version updates could include:
 - a high score table that saves results with player names
 
 ## Site Developer
----
+
 As the site, I conducted two user interviews to gather feedback on the system to ensure the site meets the strategy:
 
 1. Fun

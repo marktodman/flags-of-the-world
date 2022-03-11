@@ -10,6 +10,16 @@ The deployed [Flags of the World website.](https://marktodman.github.io/flags-of
 The [GitHub repository.](https://github.com/marktodman/flags-of-the-world)
 
 ---
+## OVERVIEW
+---
+
+1. [User Experience](#user-experience-ux)
+2. [Testing](#testing)
+3. [Deployment](#deployment)
+4. [Future Development Ideas](#future-development-ideas)
+5. [Credits](#credits)
+
+---
 ## USER EXPERIENCE (UX)
 ---
 
@@ -108,46 +118,44 @@ The website is designed to be clean and clear for the user. The color palette wa
 
 ![Coolors color palette for Flags of the World.](/assets/images/readme-images/colors-FOW.png)
 
-Cabin Sketch was chosen for the logo as it is an informal font. As the site is designed for new investors and investors looking for new ideas, an informal font is used to make the user feel relaxed (unlike many other financial webites). Cabin Sketch is used for the logo and throughout the website in the section headers.
+One additional green color was chosen to be displayed in the body as an indication of a correct answer.
 
-![Logo with Cabin Sketch font.](/assets/images/readme-images/logo.png)
-
-Cabin, a sans-serif font, was chosen for the sub-section headers as this compliments the logo and section headers.
-
-Libre Baskerville, a serif font, was chosen for the main text as it is easy to read and offers a good contrast with the Cabin and Cabin Sketch.
-
-The sections and sub-sections appear as rows on smaller (less than 850px) screens. On larger (over 850px) screens the sections are in three sub-section columns. This design is repeated throughout the page and provides emphasis and balance.
-
-The sections are separated by rows of icons that visually emphasise the section text that has gone before. They serve to break up the sections and to reinforce the messaging.
-
-![Environmental Social and Governance icons.](/assets/images/readme-images/esg-icons.png) ![Impact Growth and Balance icons.](/assets/images/readme-images/igb-icons.png)
+Fredoka was chosen at the font for use throughout the site as it is an easy to read, sans serif font that also provides enough interest to enhance the UI whilst playing the game. 
 
 --- 
 ## TESTING
 ---
 
+## User Stories
+
+Testing of user stories was conducted throughout the build. Detailed User Stories can be [read here](userstories.md)
+
 ## HTML Validation
 
-The HTML code has been tested for errors with the [W3 HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarktodman.github.io%2Fsustainable-investing%2F) and passed with no errors.
+The HTML code has been tested for errors with the [W3 HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarktodman.github.io%2Fflags-of-the-world%2F) and passed with no errors.
 
 ## CSS Validation
 
-The CSS code has been tested for errors with the [W3 CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarktodman.github.io%2Fsustainable-investing%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) and passed with no errors.
+The CSS code has been tested for errors with the [W3 CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarktodman.github.io%2Fflags-of-the-world%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) and passed with no errors.
+
+## JavaScript Validation
+
+The JavaScript code has been tested for errors with [JSHint](https://jshint.com/) and passed with no errors.
 
 ## Accessibility 
 
 The website has been tested for accessbility using Lighthouse on Chrome DevTools and scored 100.
 
-![Extract from Lighthouse report.](/assets/images/readme-images/lighthouse.png)
+![Extract from Lighthouse report.](/assets/images/readme-images/accessibility-FOW.png)
 
 ## Fixes
 
 There were a number of fixes identified during validation:
 
-1. Duplicate classes. Some classes had been duplicated in the HTML elements associated with the icons. The duplications were deleted.
-2. Font contrast. The icon fonts did not provide enough contrast. The font-family and font-color were changed to improve accessiblity.
-3. Input fields on Newsletter. The input fields were not labelled. Labels were added to improve accessibility.
-4. Image file size. The hero image was origianlly 4MB causing the site to load slowly. The image was resolution was reduced, compressed and converted to WebP format, which has improved performance.
+1. Image source. The div element on the index.html page was empty as it is populated through the JavaScript code.
+2. Border color. There was an invalid piece of code in the border color. The code was removed.
+3. Label for input field. The label id and input id did not match. 
+4. Extra element tag. An extra element tag was identified. The extra tag was deleted.
 
 ---
 ## DEPLOYMENT

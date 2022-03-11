@@ -31,40 +31,42 @@
             <a href="index.html" id="home" class="hide">Home</a>
         </nav>
     </header>
-        <!-- GAME CONTAINER -->
-        <div class="container">
-            <div id="timer" class="hide"></div>
-            <div id="intro-text" class="intro">
-                <h2>Welcome to Flags of the World!</h2>
-                <p>The fun game that tests your knowledge about the flags of nations around the World.</p>
-                <p>Test yourself against more than 200 flags!</p>
-                <p>How many can you get in 60 seconds?</p>
-                <!-- NAME INPUT -->
-                <div>
-                    <label for="player-name">Enter your name and click to START to begin the timer:</label>
-                    <p><input type="text" id="player-name" class="name-input" placeholder="Enter your name..."></p>
-                </div>
+    <!-- GAME CONTAINER -->
+    <div class="container">
+        <div id="timer" class="hide"></div>
+        <div id="intro-text" class="intro">
+            <h2>Welcome to Flags of the World!</h2>
+            <p>The fun game that tests your knowledge about the flags of nations around the World.</p>
+            <p>Test yourself against more than 200 flags!</p>
+            <p>How many can you get in 60 seconds?</p>
+            <!-- NAME INPUT -->
+            <div>
+                <label for="player-name">Enter your name and click to START to begin the timer:</label>
+                <p><input type="text" id="player-name" class="name-input" placeholder="Enter your name..."></p>
             </div>
-            <!-- GAME AREA -->
-            <div id="flag-container" class="flag hide"><img src="assets/images/ad.webp" id="flag" alt="flag image"></div>
-            <!-- ANSWER BUTTONS -->
-            <div id="answer-buttons" class="answer-box hide">
-                <button class="btn"></button>
-                <button class="btn"></button>
-                <button class="btn"></button>
-            </div>
-            <!-- RESULT AREA -->
-            <div id="end" class="hide"><img src="assets/images/general-images/favicon-checks-32x32.png" alt="Checkered Flag"></div>
-            <div id="result" class="result hide"></div>
-            <!-- CONTROLS AREA -->
-            <div class="answer-box"><button class="start-btn" id="start-button">Start >></button></div>
-            <div class="answer-box"><button class="next-btn hide" id="next-button">Next flag >></button></div>
-            <div class="answer-box"><button class="next-btn hide" id="new-player">New player >></button></div>
-            <!-- SCORE AREA -->
-            <div id="score-area" class="score hide">Score: <span id="score" class="score">0</span></div>
         </div>
-        <!-- SCRIPTS -->
-        <script src="assets/js/flags.js"></script>
-        <script src="assets/js/game.js"></script>
+        <!-- GAME AREA -->
+        <div id="flag-container" class="flag hide"><img src="assets/images/ad.webp" id="flag" alt="flag image"></div>
+        <!-- ANSWER BUTTONS -->
+        <div id="answer-buttons" class="answer-box hide">
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+        </div>
+        <!-- RESULT AREA -->
+        <div id="end" class="hide"><img src="assets/images/general-images/favicon-checks-32x32.png"
+                alt="Checkered Flag"></div>
+        <div id="result" class="result hide"></div>
+        <!-- CONTROLS AREA -->
+        <div class="answer-box"><button class="start-btn" id="start-button">Start >></button></div>
+        <div class="answer-box"><button class="next-btn hide" id="next-button">Next flag >></button></div>
+        <div class="answer-box"><button class="next-btn hide" id="new-player">New player >></button></div>
+        <!-- SCORE AREA -->
+        <div id="score-area" class="score hide">Score: <span id="score" class="score">0</span></div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="assets/js/flags.js"></script>
+    <script src="assets/js/game.js"></script>
 </body>
+
 </html>

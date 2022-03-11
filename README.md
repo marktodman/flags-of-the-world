@@ -111,6 +111,10 @@ If the user does not input their name, the result will not include their name bu
 
 The game is designed to keep the user playing, either on their own to beat their previous score, or with a friend on the same device.
 
+There is a favicon of a red flag to mark the page tab and make it easy to spot in amongst other brower tabs.
+
+![Red flag favicon.](assets/images/readme-images/favicon-FOW.png)
+
 ## Visual Design
 
 The visual design was chosen specifically to make the game play area stand out and to focus the user on the center of the screen. Effects such as shadow and button hover are utilised to provide emphasis and user feedback.

@@ -84,8 +84,7 @@ body {
     font-size: 1.1rem;
 }
 
-
-/* Different background colors for correct and incorrect answers */
+/* Different background colors for correct and incorrect answers. Idea from Web Dev Simplified (https://youtu.be/riDzcEQbX6k) */
 
 body.correct {
     background-color: #52b788;
